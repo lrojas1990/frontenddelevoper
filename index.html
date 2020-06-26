@@ -6,25 +6,38 @@
     <title>Document</title>
 </head>
 <style>
-    p{
+    p:first-child{
         color: red;
     }
+
+    p:last-child{
+        color: blue;
+    }
+    p:nth-child(2){
+        color: orange;
+    }
+
+  
 </style>
 <body>
   
     <header>
         <h1>Platzi Video</h1>
+        <p>Esto es un parrafo que esta en el header</p>
     </header>
     <nav>
     <ul>
         <li>Cuenta</li>
         <li>Cerrar Sesion</li>
+        <p>Esto es un parrafo que esta en el nav</p>
     </ul>
 </nav>
 <nav>
 
 <section>
     <p>Selección Principal
+    </p>
+    <p>Esto es un parrafo que esta en la seccion
     </p>
     </section>
 </nav>
@@ -33,6 +46,9 @@
             <li>Contáctanos</li>
             <li>Politica de Privacidad</li>
             <li>Terminos y Condiciones</li>
+            <p>Esto es un parrafo del footer y esta de penultimo</p>
+            <p>Esto es un parrafo que esta en la seccion de footer😄🕵</p>
+            
         </ul>
     </footer>
 
@@ -47,6 +63,7 @@
         <ol>
             <li>Stangers things</li>
         </ol>
+        <p>Este es un parrafo que esta fuera del footer, justo en la parte de abajo</p>
 
 </body>
 </html>
