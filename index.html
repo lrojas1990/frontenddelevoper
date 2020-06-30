@@ -4,22 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200&display=swap" rel="stylesheet">
   </head>
   <style>
     body {
       margin: 0;
       background-color: #ab88ff;
+      font-family: 'Muli', sans-serif;
     }
 
     .header {
       width: 100%;
       background-color: #ab88ff;
       height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     
     }
     h1 {
       margin: 0px;
     }
 
+.header__menu:hover ul, ul:hover{
+    display: block;
+
+}
     .header__img {
       height: 67px;
       width: 200px;
@@ -33,19 +43,23 @@
 
     .header__menu {
       margin-right: 30px;
+      
+      
     }
   
-    a{
-        color: white;
-        text-decoration: none;
-    }
+ 
     p{
         color: white;
+        
     }
 
     .header__menu--profile{
-      margin-right: 8px;
-      width: 40px;
+      margin-right: 9px;
+      margin-top: 20px;
+      
+      display: flex;
+      align-items: center;
+      
     }
     .header__menu ul{
         
@@ -55,6 +69,23 @@
         width: 100px;
         text-align: right;
         margin-left: -14px;
+       margin: 0px;
+       display: none;
+    }
+
+    .header__menu li{
+        margin: 10px 0px;
+    }
+    .header__menu li a{
+        color: white;
+        text-decoration: none;
+    }
+    .header__menu li a:hover{
+        text-decoration: underline;
+    }
+
+    .header__menu--profile p{
+        margin: 0px;
     }
   </style>
   <body>
