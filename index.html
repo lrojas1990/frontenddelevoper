@@ -12,62 +12,8 @@
     
         
     }
-    p::first-letter{
-        color: green;
-        font-size: 30px;
-    }
-    
-  
 
-    p:first-child{
-        color: red;
-    }
-
-    p:last-child{
-        color: blue;
-    }
-    p:nth-child(2){
-        color: orange;
-    }
-
-    .caja1{
-        height: 30px;
-        width: 100px;
-        background-color: green;
-        padding: 40px;
-        border: solid yellow 30px;
-        box-sizing: b;
-    
-    }
-    .caja2{
-        height: 30px;
-        width: 100px;
-        background-color: blue;
-        padding: 40px;
-        border: solid red 30px;
-        box-sizing: b;
-    
-    }
-    .caja3{
-        height: 30px;
-        width: 100px;
-        background-color: gray;
-        padding: 40px;
-        border: solid rebeccapurple 30px;
-        box-sizing: b;
-    
-    }
-    .caja4{
-        height: 30px;
-        width: 100px;
-        background-color: brown;
-        padding: 40px;
-        border: solid bisque 30px;
-        box-sizing: b;
-    
-    }
-
-header{
+.header{
     width: 100%;
     background-color: #AB88FF;
     height: 80px;
@@ -76,7 +22,7 @@ h1{
     margin: 0px;
 }
 
-#logo{
+.header__img{
     height: 67px;
     width: 200px;
     margin-top: 10px;
@@ -94,8 +40,8 @@ button{
 </style>
 <body>
   
-    <header>
-        <img id="logo" src="./logo.png" alt="logo">
+    <header class="header">
+        <img class="header__img" src="./logo.png" alt="logo">
         
     </header>
   
