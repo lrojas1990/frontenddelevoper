@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Muli:wght@200&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <style>
     body {
       margin: 0;
       background-color: #ab88ff;
-      font-family: 'Muli', sans-serif;
+      font-family: "Muli", sans-serif;
     }
 
     .header {
@@ -20,16 +23,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-     
     }
     h1 {
       margin: 0px;
     }
 
-.header__menu:hover ul, ul:hover{
-    display: block;
-
-}
+    .header__menu:hover ul,
+    ul:hover {
+      display: block;
+    }
     .header__img {
       height: 67px;
       width: 200px;
@@ -43,90 +45,139 @@
 
     .header__menu {
       margin-right: 30px;
-      
-      
-    }
-  
- 
-    p{
-        color: white;
-        
     }
 
-    .header__menu--profile{
+    p {
+      color: white;
+    }
+
+    .header__menu--profile {
       margin-right: 9px;
       margin-top: 20px;
-      
+
       display: flex;
       align-items: center;
-      
     }
-    .header__menu ul{
-        
-        list-style: none;
-        padding: 0px;
-        position: absolute;
-        width: 100px;
-        text-align: right;
-        margin-left: -14px;
-       margin: 0px;
-       display: none;
+    .header__menu ul {
+      list-style: none;
+      padding: 0px;
+      position: absolute;
+      width: 100px;
+      text-align: right;
+      margin-left: -14px;
+      margin: 0px;
+      display: none;
     }
 
-    .header__menu li{
-        margin: 10px 0px;
+    .header__menu li {
+      margin: 10px 0px;
     }
-    .header__menu li a{
-        color: white;
-        text-decoration: none;
+    .header__menu li a {
+      color: white;
+      text-decoration: none;
     }
-    .header__menu li a:hover{
-        text-decoration: underline;
+    .header__menu li a:hover {
+      text-decoration: underline;
     }
 
-    .header__menu--profile p{
-        margin: 0px;
+    .header__menu--profile p {
+      margin: 0px;
     }
-    .main{
+    .main {
       text-align: center;
     }
-    .main__title{
+    .main__title {
       color: white;
       font-weight: 900;
     }
-    .main__input{
+    .main__input {
       background-color: #bdb2ff;
       border-radius: 20px;
       border: solid white 2px;
       width: 60%;
       height: 5vh;
-      outline:none;
+      outline: none;
       color: white;
       font-size: 15px;
       padding-left: 20px;
-      font-family: 'Muli', sans-serif;
+      font-family: "Muli", sans-serif;
     }
-    ::placeholder { color: white;
-    padding-left: 15px;
-     }
+    ::placeholder {
+      color: white;
+      padding-left: 15px;
+    }
+
+    .carousel {
+      width: 100%;
+      background-color: green;
+      height: 45vh;
+      margin-top: 60px;
+      overflow: scroll;
+      padding-left: 30px;
+      position: relative;
+    }
+
+    .carousel__container {
+      white-space: nowrap;
+      margin: 70px 0px;
+      padding-bottom: 10px;
+    }
+
+    .carousel__item {
+      width: 200px;
+      height: 250px;
+      border-radius: 20px;
+      background-color: blue;
+      overflow: hidden;
+      margin-right: 10px;
+      margin-left: 10px;
+      display: inline-block;
+      cursor: pointer;
+      transition: 450ms all;
+      transform-origin: center left;
+    }
+
+    .carousel__item:hover ~ .carousel__item {
+      transform: translate3d(100px, 0, 0);
+      
+    }
+
+    .carousel__container:hover .carousel__item {
+      opacity: 0.3;
+    }
+
+    .carousel__container:hover  .carousel__item:hover {
+      transform: scale(1.5);
+      opacity: 1;
+      
+    }
   </style>
   <body>
     <header class="header">
       <img class="header__img" src="./logo.png" alt="logo" />
       <div class="header__menu">
         <div class="header__menu--profile">
-            <img src="https://img.icons8.com/color/48/000000/administrator-male--v1.png"/>
-            <p>Perfil</p>
+          <img
+            src="https://img.icons8.com/color/48/000000/administrator-male--v1.png"
+          />
+          <p>Perfil</p>
         </div>
         <ul>
-            <li><a href="#">Cuenta</a></li>
-            <li><a href="#">Cerrar Sesion</a></li>
+          <li><a href="#">Cuenta</a></li>
+          <li><a href="#">Cerrar Sesion</a></li>
         </ul>
       </div>
     </header>
     <section class="main">
       <h2 class="main__title">¿Que quieres ver hoy?</h2>
-      <input class="main__input" type="text" placeholder="Buscar...">
+      <input class="main__input" type="text" placeholder="Buscar..." />
+    </section>
+    <section class="carousel">
+      <div class="carousel__container">
+        <div class="carousel__item"></div>
+        <div class="carousel__item"></div>
+        <div class="carousel__item"></div>  
+      </div>
     </section>
   </body>
 </html>
