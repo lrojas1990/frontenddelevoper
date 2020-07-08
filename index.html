@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <style>
+    .carousel {
+      background-color: teal;
+      width: 100%;
+      height: 45vh;
+      margin-top: 60px;
+      overflow: scroll;
+      padding-left: 30px;
+      position: relative;
+    }
+
+.carousel__slide{
+
+  white-space: nowrap;
+ margin: 30px 0px;
+  height: 100%;
+  padding-bottom: 10px;
+  
+  
+}
+    .carousel__item {
+      width: 160px;
+      height: 210px;
+      background-color: yellowgreen;
+      border-radius: 20%;
+      display: inline-block;
+      margin-right: 10px;
+      align-items: center;
+      margin-top: 4%;
+      margin-right: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: 450ms all;
+      transform-origin: center left;
+      
     
-</body>
+
+    }
+
+    .carousel__item:hover ~ .carousel__item{
+      transform: translate3d(100px,0,0);
+
+    } 
+
+    .carousel__slide:hover .carousel__item{
+      opacity: 0.3;
+    }
+
+    .carousel__slide:hover .carousel__item:hover {
+      transform: scale(1.5);
+      opacity: 1;
+    }
+
+
+
+  </style>
+  <body>
+    <section>
+      <div class="carousel">
+        <div class="carousel__slide">
+          <div class="carousel__item"></div>
+          <div class="carousel__item"></div>
+          <div class="carousel__item"></div>
+          <div class="carousel__item"></div>
+          <div class="carousel__item"></div>
+          <div class="carousel__item"></div>
+          <div class="carousel__item"></div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
