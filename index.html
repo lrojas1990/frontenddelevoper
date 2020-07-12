@@ -110,7 +110,7 @@
     .carousel {
       width: 100%;
       background-color: green;
-      height: 45vh;
+      height: 50vh;
       margin-top: 60px;
       overflow: scroll;
       padding-left: 30px;
@@ -123,7 +123,7 @@
       padding-bottom: 10px;
     }
 
-    .carousel__item {
+    .carousel-item {
       width: 200px;
       height: 250px;
       border-radius: 20px;
@@ -135,22 +135,53 @@
       cursor: pointer;
       transition: 450ms all;
       transform-origin: center left;
+      position: relative;
     }
 
-    .carousel__item:hover ~ .carousel__item {
+    .carousel-item:hover ~ .carousel-item {
       transform: translate3d(100px, 0, 0);
-      
     }
 
-    .carousel__container:hover .carousel__item {
+    .carousel__container:hover .carousel-item {
       opacity: 0.3;
     }
 
-    .carousel__container:hover  .carousel__item:hover {
+    .carousel__container:hover .carousel-item:hover {
       transform: scale(1.5);
       opacity: 1;
-      
     }
+
+    .carousel-item__img {
+      width: 200px;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .carousel-item__details{
+      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+      font-size: 10px;
+      opacity: 1;
+      transition: 450ms opacity;
+      padding: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+    }
+    .carousel-item__details--icon{
+      margin-top: 160px;
+      width: 20px;
+      height: 20px;
+     
+    }
+    p{
+      margin: 1px;
+    }
+  
   </style>
   <body>
     <header class="header">
@@ -174,9 +205,28 @@
     </section>
     <section class="carousel">
       <div class="carousel__container">
-        <div class="carousel__item"></div>
-        <div class="carousel__item"></div>
-        <div class="carousel__item"></div>  
+        <div class="carousel-item">
+          <img class="carousel-item__img" src="img1.jpg" alt="img1" />
+          <div class="carousel-item__details">
+            <div>
+              <img class="carousel-item__details--icon" src="https://img.icons8.com/flat_round/64/000000/play--v1.png"/>
+              <img class="carousel-item__details--icon" src="https://img.icons8.com/cotton/64/000000/plus--v1.png"/>
+            </div>
+            <p class="carousel-item__details--title">Titulo Descriptivo</p>
+            <p class="carousel-item__details--subtitle">2019 16+ 114 min</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="carousel-item__img" src="img2.jpeg" alt="img2" />
+          <div class="carousel-item__details">
+            <div>
+              <img class="carousel-item__details--icon" src="https://img.icons8.com/flat_round/64/000000/play--v1.png"/>
+              <img class="carousel-item__details--icon" src="https://img.icons8.com/cotton/64/000000/plus--v1.png"/>
+            </div>
+            <p class="carousel-item__details--title">Titulo Descriptivo</p>
+            <p class="carousel-item__details--subtitle">2019 16+ 114 min</p>
+          </div>
+        </div>
       </div>
     </section>
   </body>
